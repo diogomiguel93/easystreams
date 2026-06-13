@@ -537,7 +537,7 @@ function getStreams(id, type, season, episode, providerContext = null) {
       const apiPayload = yield response.json().catch(() => null);
       const embedUrl = extractEmbedSrcFromApiPayload(apiPayload);
       console.log(apiPayload);
-      console.log(embedUrl);
+      console.log(`[StreamingCommunity] EmbedUrl: ${embedUrl}`);
       if (!embedUrl) {
         console.log("[StreamingCommunity] Could not find embed src in API payload");
         return [];
