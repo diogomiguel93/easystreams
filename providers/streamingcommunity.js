@@ -377,6 +377,7 @@ function getPlaylistHeaders(embedUrl) {
 }
 function extractEmbedSrcFromApiPayload(payload) {
   const rawSrc = payload && typeof payload === "object" ? payload.src : null;
+  console.log(payload);
   if (!rawSrc) return null;
   try {
     return new URL(rawSrc, getStreamingCommunityBaseUrl()).toString();
