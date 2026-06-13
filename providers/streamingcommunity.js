@@ -380,8 +380,10 @@ function extractEmbedSrcFromApiPayload(payload) {
   console.log("[rawSrc]", rawSrc);
   //if (!rawSrc) return null;
   try {
+    console.log("Try rawSrc");
     return new URL(rawSrc, getStreamingCommunityBaseUrl()).toString();
   } catch (e) {
+    console.log("Error rawSrc");
     return null;
   }
 }
